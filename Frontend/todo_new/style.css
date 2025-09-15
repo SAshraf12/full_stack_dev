@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+#newTask {
+  width: 60%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+input.editing {
+  width: 95%;
+  padding: 5px;
+  font-size: 16px;
+}

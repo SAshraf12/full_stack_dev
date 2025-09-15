@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form{
+            display : grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+            width: 50%;
+            margin-top: 5%;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: lightgrey;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td>Z</td>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            <td>Y</td>
+        </tr>
+
+        <tr>
+            <td>C</td>
+            <td>X</td>
+        </tr>
+        </table>
+
+        <br>
+
+        <div class="form">
+        <form>  
+            <label for="name">Name: </label>
+            <input type="text" name="name">
+
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject">
+            
+       
+
+            <p>Gender :</p>
+            
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" value="male">
+
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" value="female">
+
+            <label for="address">Address:</label>
+            <input type="textarea" name="address">
+
+            <button type="submit">Submit</button>
+
+        </form>
+        </div>
+    
+
+
+    
+</body>
+</html>

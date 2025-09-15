@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashraf S | Portfolio</title>
+  <style>
+    :root {
+      --primary: #222;
+      --accent: #4cafef;
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    /* About Section */
+    .about {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .about img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+    }
+
+    .about p {
+      flex: 1;
+      margin: 0;
+    }
+
+    /* Skills Section */
+    .skills {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-list li {
+      background: #f0f0f0;
+      padding: 0.8rem;
+      border-radius: 6px;
+      font-weight: 600;
+      color: var(--primary);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .skill-list li:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .project-link:hover {
+      background: #007acc;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-top: 2rem;
+    }
+
+    .contact form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .contact button:hover {
+      background: #007acc;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about img {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ashraf S</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- About -->
+    <section id="about" class="about">
+      <img src="https://via.placeholder.com/200" alt="Profile Photo">
+      <p>
+        I am Ashraf S, a passionate web developer who enjoys building clean, responsive, and user-friendly websites.  
+        I focus on writing efficient code and designing intuitive interfaces to deliver great user experiences.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skill-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>SQL</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=600&q=80" alt="Portfolio Website">
+          <div class="project-content">
+            <div class="project-title">Portfolio Website</div>
+            <div class="project-desc">A clean personal portfolio showcasing skills, projects, and contact details with responsive design.</div>
+            <a class="project-link" href="#">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Task Manager App">
+          <div class="project-content">
+            <div class="project-title">Task Manager App</div>
+            <div class="project-desc">A MERN app for managing tasks with authentication, real-time updates, and intuitive UI.</div>
+            <a class="project-link" href="#">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" alt="Weather Dashboard">
+          <div class="project-content">
+            <div class="project-title">Weather Dashboard</div>
+            <div class="project-desc">A responsive dashboard fetching live weather data via API, with charts and location search.</div>
+            <a class="project-link" href="#">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ashraf S | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
